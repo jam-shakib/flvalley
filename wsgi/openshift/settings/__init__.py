@@ -85,6 +85,7 @@ INSTALLED_APPS = (
     "django.contrib.sites",
     "django.contrib.sitemaps",
     "django.contrib.staticfiles",
+	"cartridge.shop",
     "mezzanine.boot",
     "mezzanine.conf",
     "mezzanine.core",
@@ -96,7 +97,7 @@ INSTALLED_APPS = (
     "mezzanine.twitter",
     #"mezzanine.accounts",
     #"mezzanine.mobile",
-	"cartridge.shop",
+	
 )
 
 
