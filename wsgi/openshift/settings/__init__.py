@@ -6,7 +6,7 @@ PROJECT_DIRNAME = 'openshift'
 
 
 USE_SOUTH = True
-
+SHOP_CURRENCY_LOCALE = 'en_US'
 
 ADMINS = (
     # ('Your Name', 'your@email.com'),
