@@ -3,19 +3,25 @@
 {% load mezzanine_tags shop_tags i18n %}
 {% block body_id %}category{% endblock %}
 
-{% block meta_title %}{% trans "Home" %}{% endblock %}
-{% block title %}{% trans "Home" %}{% endblock %}
-
-{% block breadcrumb_menu %}
-<li class="active">{% trans "Home" %}</li>
-{% endblock %}
-
 {% block main %}{{ block.super }}
 
-<h2>Welcome to Kandicrafts !</h2>
-<p>
-   This week's hand picked Kandies for your !
-</p>
+
+
+{% if products.paginator.count != 0 %}
+
+<form class="product-sorting">
+    <label>{% trans "Sort by" %}</label>
+    <select onchange="location.href = this[this.selectedIndex].value;">
+    {% for name, option in settings.SHOP_PRODUCT_SORT_OPTIONS %}
+    {% if "rating" not in option or settings.SHOP_USE_RATINGS %}
+    <option{% if option == products.sort_by %} selected{% endif %}
+        value="{{ category.get_absolute_url }}?sort={{ option }}{{ querystring }}">
+        {{ name }}
+    </option>
+    {% endif %}
+    {% endfor %}
+    </select>
+</form>
 
 <ul class="thumbnails">
 {% for product in products.object_list %}
@@ -41,5 +47,9 @@
 {% endfor %}
 </ul>
 
+{% pagination_for products %}
+
+{% endif %}
 
 {% endblock %}
+
