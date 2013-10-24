@@ -1,5 +1,7 @@
 {% extends "pages/page.html" %}
+
 {% load mezzanine_tags shop_tags i18n %}
+{% block body_id %}category{% endblock %}
 
 {% block meta_title %}{% trans "Home" %}{% endblock %}
 {% block title %}{% trans "Home" %}{% endblock %}
@@ -8,7 +10,7 @@
 <li class="active">{% trans "Home" %}</li>
 {% endblock %}
 
-{% block main %}
+{% block main %}{{ block.super }}
 
 <h2>Welcome to Kandicrafts !</h2>
 <p>
@@ -24,7 +26,7 @@
         {% else %}
         <div class="placeholder"></div>
         {% endif %}
-        <h6>{{ product }}</h6>
+        <h6>{{ product|truncatechars:12 }}</h6>
         {% if product.has_price %}
             {% if product.on_sale %}
             <span class="old-price">{{ product.unit_price|currency }}</span>
