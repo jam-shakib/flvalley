@@ -17,9 +17,9 @@ urlpatterns = patterns("",
     url("^account/orders/$", "cartridge.shop.views.order_history",
         name="shop_order_history"),
 	
-    #url("^$", direct_to_template, {"template": "index.html"}, name="home"),
-    url("^$", "mezzanine.pages.views.page", {"slug": "/"}, name="home"),
-    #url("^$", "mezzanine.blog.views.blog_post_list", name="home"),
+    url("^$", direct_to_template, {"template": "index.html"}, name="home"),
+    # url("^$", "mezzanine.pages.views.page", {"slug": "/"}, name="home"),
+    # url("^$", "mezzanine.blog.views.blog_post_list", name="home"),
 
     ("^", include("mezzanine.urls")),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
