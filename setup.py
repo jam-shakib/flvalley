@@ -13,6 +13,7 @@ setup(
         'Django==1.5.1',
         'mezzanine',
         'django_compressor==1.3',
-		'cartridge'
+		'cartridge',
+		'mezzanine-slides',
     ],
 )
