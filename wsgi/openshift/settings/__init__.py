@@ -86,7 +86,7 @@ INSTALLED_APPS = (
     "django.contrib.sitemaps",
     
     "django.contrib.staticfiles",
-    "mezzanine-slides",
+    "mezzanine_slides",
     "cartridge.shop",
 
     "mezzanine.boot",
