@@ -9,10 +9,11 @@ setup(
     author='Isaac Bythewood',
     author_email='isaac@bythewood.me',
     url='http://isaacbythewood.com/',
-    install_requires=[
-        'Django==1.5.1',
-        'mezzanine',
-        'django_compressor==1.3',
+        'Django==1.6.5',
+        'psycopg2==2.5.3', # important as Openshift default is the older 2.0.4 version throwing errors
+        'mezzanine==3.1.4',
+        'django_compressor==1.4',
+        
 		'cartridge',
 		'mezzanine-slides',
     ],
