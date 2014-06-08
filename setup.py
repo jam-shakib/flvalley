@@ -14,7 +14,7 @@ setup(
         'psycopg2==2.5.3', # important as Openshift default is the older 2.0.4 version throwing errors
         'mezzanine==3.1.4',
         'django_compressor==1.4',
-        'cartridge',
-        'mezzanine-slides',
+        'cartridge==0.9.3',
+        'mezzanine-slides==1.1.0',
     ],
 )
