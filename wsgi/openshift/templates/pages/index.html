@@ -12,14 +12,14 @@
 
 {% block main %}{{ block.super }}
 
-<h2>Welcome to Bita's Bakeshop</h2>
+<h2>Welcome to Cacao Bakeshop</h2>
 <p>
    This week's selections 
 </p>
 
-<ul class="thumbnails">
+<div class="thumbnails">
 {% for product in products.object_list %}
-<li class="col-xs-6 col-sm-4 col-lg-3 product-thumb">
+<div class="col-xs-6 col-sm-4 col-lg-3 product-thumb">
     <a href="{{ product.get_absolute_url }}" class="thumbnail">
         {% if product.image %}
         <img src="{{ MEDIA_URL }}{% thumbnail product.image 100 100 %}">
@@ -37,9 +37,9 @@
         {% trans "Coming soon" %}
         {% endif %}
     </a>
-</li>
+</div>
 {% endfor %}
-</ul>
+</div>
 
 
 {% endblock %}
