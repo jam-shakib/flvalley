@@ -113,3 +113,13 @@ OPTIONAL_APPS = (
     PACKAGE_NAME_FILEBROWSER,
     PACKAGE_NAME_GRAPPELLI,
 )
+
+
+EMAIL_HOST_USER = 'postmaster@sandbox9a322e9a0eb94113b71893929eec7f7f.mailgun.org'
+EMAIL_HOST = 'sandbox9a322e9a0eb94113b71893929eec7f7f.mailgun.org'
+EMAIL_HOST_PASSWORD = 'postmaster2014'
+EMAIL_PORT = 25
+ACCOUNTS_APPROVAL_EMAILS=['jam.shakib@gmail.com',]
+SERVER_EMAIL='postmaster@sandbox9a322e9a0eb94113b71893929eec7f7f.mailgun.org'
+DEFAULT_FROM_EMAIL='postmaster@sandbox9a322e9a0eb94113b71893929eec7f7f.mailgun.org'
+ACCOUNTS_VERIFICATION_REQUIRED=True
