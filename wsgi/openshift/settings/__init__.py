@@ -116,8 +116,7 @@ OPTIONAL_APPS = (
 
 
 EMAIL_HOST_USER = 'postmaster@cacaobakeshop.com'
-#EMAIL_HOST = 'sandbox9a322e9a0eb94113b71893929eec7f7f.mailgun.org'
-EMAIL_HOST = 'cacabakeshop.com'
+EMAIL_HOST = 'cacaobakeshop.com'
 EMAIL_HOST_PASSWORD = 'postmaster2014'
 EMAIL_PORT = 25
 ACCOUNTS_APPROVAL_EMAILS=['jam.shakib@gmail.com',]
