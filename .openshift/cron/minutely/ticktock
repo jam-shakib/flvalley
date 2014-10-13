@@ -1,2 +1,2 @@
-#!/bin/python
+#!/user/bin/env python
 python path/to/your/site/manage.py poll_twitter
