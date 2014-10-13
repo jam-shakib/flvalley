@@ -1,6 +1,14 @@
 {% extends "pages/page.html" %}
 
 {% load mezzanine_tags shop_tags i18n %}
+
+{% extra_css %}
+<style>
+ .panel-body, .col-md-2 { 
+  visibility: hidden; 
+}
+</style>
+{% endblock %}
 {% block body_id %}category{% endblock %}
 
 {% block title %}{% endblock %}

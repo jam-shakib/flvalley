@@ -1,2 +1,3 @@
-#!/bin/python
-python path/to/your/site/manage.py poll_twitter
+#!/bin/bash
+source $OPENSHIFT_PYTHON_DIR/virtenv/bin/activate
+python "$OPENSHIFT_REPO_DIR"wsgi/openshift/manage.py poll_twitter --settings=settings.production
