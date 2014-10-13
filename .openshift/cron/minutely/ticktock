@@ -1,2 +1,2 @@
-#!/user/bin/env python
-python path/to/your/site/manage.py poll_twitter --settings=settings.production
+#!/bin/bash
+date >> ../../temp.txt
