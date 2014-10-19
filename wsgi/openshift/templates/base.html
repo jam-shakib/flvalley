@@ -26,7 +26,16 @@
 {% ifinstalled cartridge.shop %}
 <link rel="stylesheet" href="{{ STATIC_URL }}css/cartridge.css">
 {% endifinstalled %}
-{% block extra_css %}{% endblock %}
+{% block extra_css %}
+<style>
+ div.panel.panel-default, .col-md-2 { 
+  display: none; 
+}
+  div.row.shop-category-list {
+    display: none;
+  }
+</style>
+{% endblock %}
 {% endcompress %}
 
 {% compress js %}
