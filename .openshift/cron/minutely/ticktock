@@ -1,2 +1,4 @@
 #!/bin/bash
+source $OPENSHIFT_PYTHON_DIR/virtenv/bin/activate
+python "$OPENSHIFT_REPO_DIR"wsgi/openshift/manage.py poll_twitter --settings=settings.production
 date >> ${OPENSHIFT_LOG_DIR}/ticktock.log
