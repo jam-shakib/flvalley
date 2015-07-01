@@ -1,0 +1,25 @@
+{% extends "pages/page.html" %}
+
+{% load mezzanine_tags shop_tags i18n %}
+
+{% block extra_css %}
+<style>
+ div.panel.panel-default, .col-md-2 { 
+  display: none; 
+}
+  .breadcrumb {
+    display: none;
+  }
+</style>
+{% endblock %}
+{% block body_id %}category{% endblock %}
+
+{% block title %}{% endblock %}
+
+{% block breadcrumb_menu %}{% endblock %}
+
+</ul>
+{% block main %}{{ block.super }}
+
+
+{% endblock %}

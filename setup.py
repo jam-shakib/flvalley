@@ -1,10 +1,22 @@
+
+#!/usr/bin/env python
+
 from setuptools import setup
 
-setup(name='YourAppName',
-      version='1.0',
-      description='OpenShift App',
-      author='Your Name',
-      author_email='example@example.com',
-      url='http://www.python.org/sigs/distutils-sig/',
-#      install_requires=['Django>=1.3'],
-     )
+setup(
+    name='mezzanine-openshift',
+    version='1.2',
+    description='Mezzanine configured for deployment on OpenShift.',
+    author='Isaac Bythewood',
+    author_email='isaac@bythewood.me',
+    url='http://isaacbythewood.com/',
+    install_requires=[
+        'Django==1.6.5',
+        'psycopg2==2.5.3', # important as Openshift default is the older 2.0.4 version throwing errors
+        'mezzanine==3.1.4',
+        'django_compressor==1.4',
+        'cartridge==0.9.3',
+        'mezzanine-slides==1.1.0',
+    ],
+)
+
