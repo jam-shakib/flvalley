@@ -6,10 +6,12 @@
 
 source $OPENSHIFT_PYTHON_DIR/virtenv/bin/activate
 
-
+# If no database exists create one with sample content.
+if [ ! -f $OPENSHIFT_DATA_DIR/sqlite3.db ]
+then
     echo "Creating intial database with example content."
     python "$OPENSHIFT_REPO_DIR"wsgi/openshift/manage.py createdb --noinput --settings=settings.production
-
+fi
 
 
 # Always collect static files, static dir is erased on push and we might have
