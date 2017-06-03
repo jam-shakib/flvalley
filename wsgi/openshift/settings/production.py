@@ -8,9 +8,9 @@ ROOT_URLCONF = "%s.urls" % PROJECT_DIRNAME
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'python',
-        'USER': 'adminx8ms3ih',
-        'PASSWORD': 'WqLD1uKvFzAB',
+        'NAME': 'sampledb',
+        'USER': 'userPOL',
+        'PASSWORD': 'Y4WmunBva45IE32A',
         'HOST': '',
         'PORT': '',
     }
